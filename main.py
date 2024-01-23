@@ -1,5 +1,5 @@
 from requests import *;import os,re,random,telebot,time;from user_agent import generate_user_agent
-tk="6501362455:AAE7sMyB2m3-Q9l3hojkJv4u_PFVZrPyths"
+tk=os.environ.get('TOK')
 bot = telebot.TeleBot(tk)
 @bot.message_handler(commands=['start'])
 def s(message):
