@@ -2,4 +2,3 @@ requests
 telebot
 user_agent
 flask
-threading
