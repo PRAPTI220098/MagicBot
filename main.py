@@ -21,5 +21,5 @@ def v(message):
         time.sleep(2)
         bot.delete_message(message.chat.id, w.message_id)
         bot.send_video(message.chat.id, u, caption="Dev: [SANCHIT](tg://settings)",parse_mode='markdown')
-keep_alive
+keep_alive()
 bot.polling()
