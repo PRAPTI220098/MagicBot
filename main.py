@@ -1,4 +1,4 @@
-from requests import *;import os,re,random,telebot,time;from user_agent import generate_user_agent
+from requests import *;import os,re,random,telebot,time;from user_agent import generate_user_agent;from hh import keep_alive
 tk=os.environ.get('TOK')
 bot = telebot.TeleBot(tk)
 @bot.message_handler(commands=['start'])
@@ -21,4 +21,5 @@ def v(message):
         time.sleep(2)
         bot.delete_message(message.chat.id, w.message_id)
         bot.send_video(message.chat.id, u, caption="Dev: [SANCHIT](tg://settings)",parse_mode='markdown')
-bot.polling(non_stop=True)
+keep_alive
+bot.polling()
